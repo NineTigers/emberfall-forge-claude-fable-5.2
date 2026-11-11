@@ -21,12 +21,16 @@ build is a single self-contained HTML file.
   "바꿨어, 계속" ("switched it, continue") once the reasoning effort had been raised. The scope
   had been settled in an earlier conversation, which is not included here.
 - **Later changes:** after the game was finished, Claude Fable 5.2 also adapted it for posting as a
-  claude.ai artifact (an artifact build output, touch input, reduced-motion support, and a fallback
-  when pointer lock is unavailable). These changes are not counted in the 42 minutes.
+  claude.ai artifact (an artifact build output, touch input, reduced-motion support, and safe-area
+  insets at the screen edges). These changes are not counted in the 42 minutes.
 - **Repository preparation:** Claude Opus 5.5 chose the files to publish and wrote the README
   additions, the LICENSE and the `.gitignore`. A person set the direction and reviewed the results.
 - **Run it:** `npm install`, then `npm run build`, then open `dist/forge.html` in a browser.
   Move the mouse to look, click to strike, R to reheat, N for a new billet, Esc to pause.
+- **Credits:** the shaders use well-known public techniques: the "Hash without Sine" functions
+  (David Hoskins), interleaved gradient noise and the 13-tap bloom downsample (Jorge Jimenez),
+  FXAA (Timothy Lottes), quintic interpolation from Ken Perlin's improved noise, Worley cellular
+  noise and the Henyey–Greenstein phase function.
 - **License:** MIT. Uses three.js (MIT). This project is not made or endorsed by Anthropic.
 
 ## 제작 기록
@@ -52,8 +56,8 @@ xhigh로 시작
 앱에서 추론 수준을 xhigh로 바꾼 뒤 두 번째 지시로 본 작업을 시작했습니다.
 
 게임 완성 뒤에는 claude.ai 아티팩트로 게시하려고 Fable 5.2가 코드를 조금 더 고쳤습니다.
-게시용 HTML과 빌드 출력, 터치 망치질, 움직임 줄이기 설정 반영, 마우스 잠금이 막힐 때의
-대체 동작입니다. 이 수정은 위 작업 시간에 넣지 않았습니다.
+게시용 HTML과 빌드 출력, 터치 망치질, 움직임 줄이기 설정 반영, 화면 가장자리(안전 영역)
+대응입니다. 이 수정은 위 작업 시간에 넣지 않았습니다.
 
 ## 역할
 
@@ -106,5 +110,12 @@ npm run build
 - [three.js](https://github.com/mrdoob/three.js)(MIT, © 2010-2026 three.js authors)를 사용합니다.
   빌드 결과물 `dist/forge.html`에는 three.js가 라이선스 주석 없이 묶이므로, 결과물을 배포할 때는
   three.js 라이선스 문구를 함께 제공해야 합니다.
+- 셰이더에는 그래픽 분야에서 널리 쓰이는 공개 기법을 썼습니다. 출처를 밝혀 둡니다.
+  - 해시 함수: David Hoskins의 "Hash without Sine"
+  - 인터리브드 그라디언트 노이즈, 블룸 13탭 다운샘플: Jorge Jimenez
+  - FXAA 안티에일리어싱: Timothy Lottes
+  - 그라디언트 노이즈의 5차 보간: Ken Perlin의 개선된 노이즈
+  - 셀룰러 노이즈: Steven Worley
+  - 빛 산란 위상 함수: Henyey–Greenstein
 - 이 프로젝트는 Anthropic이 만들거나 보증한 것이 아닙니다. Claude와 Fable은 제작에 쓴 모델을
   밝히려고 적은 이름입니다.
