@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emberfall Forge</title>
+<style>
+  /* 단일 어두운 룩: 화덕 불빛(주황)과 그을린 검정. 화면 전체가 3D 장면이고 그 위에 얇은 안내만 얹는다. */
+  :root {
+    color-scheme: dark;
+    --ef-bg: #07060a;
+    --ef-ink: #f1e6d4;
+    --ef-ink-strong: #ffe3b4;
+    --ef-title-top: #fff1d6;
+    --ef-title-mid: #f3b56a;
+    --ef-ember-hi: #ffd9a0;
+    --ef-ember: #f0a14e;
+    --ef-ember-deep: #c96b2a;
+    --ef-ember-glow: rgba(255, 140, 50, 0.3);
+    --ef-key: #e9c998;
+    --ef-key-ink: #2a1a0e;
+    --ef-panel: rgba(14, 10, 8, 0.56);
+    --ef-line: rgba(255, 214, 160, 0.16);
+    --ef-track: rgba(255, 255, 255, 0.09);
+    --ef-shade: rgba(0, 0, 0, 0.8);
+    --ef-veil-0: rgba(12, 8, 6, 0.28);
+    --ef-veil-1: rgba(8, 6, 5, 0.78);
+    --ef-veil-2: rgba(5, 4, 4, 0.92);
+    --ef-cool: #8f8a84;
+    --ef-cool-hi: #e8e2d8;
+    --ef-h0: #3a0f08; --ef-h1: #a8260c; --ef-h2: #f0661a; --ef-h3: #ffb347; --ef-h4: #fff0c0;
+    --ef-font: "Avenir Next", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+    --ef-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Apple SD Gothic Neo", serif;
+  }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--ef-bg); color: var(--ef-ink); overflow: hidden; }
+  canvas#view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+</style>
+</head>
+<body>
+<canvas id="view"></canvas>
+<!--BUNDLE-->
+</body>
+</html>

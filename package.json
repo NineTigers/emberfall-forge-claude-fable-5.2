@@ -1,0 +1,13 @@
+{
+  "name": "forge-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node build.mjs --serve",
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "three": "^0.187.0"
+  }
+}
